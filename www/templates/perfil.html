@@ -1,0 +1,48 @@
+<ion-view view-title="ContratApp">
+  <ion-content>
+    <ion-list>
+
+      <div class="item item-body">
+        <img class="full-image" src="delorean.jpg">
+      </div>
+      <div class="item item-body " >
+        <div class="centro">
+        <i class="icon estrella" ng-class="estrellas[0]" ng-click="calificar(0)"></i>
+        <i class="icon estrella" ng-class="estrellas[1]" ng-click="calificar(1)"></i>
+        <i class="icon estrella" ng-class="estrellas[2]" ng-click="calificar(2)"></i>
+        <i class="icon estrella" ng-class="estrellas[3]" ng-click="calificar(3)"></i>
+        <i class="icon estrella" ng-class="estrellas[4]" ng-click="calificar(4)"></i>
+        </div>
+        <button class="button button-positive boton-centro">CALIFICAR</button>
+      </div>
+
+      <div class="item item-body">
+        <p>
+          Nombre: {{trabajador_actual.nombre}}
+        </p>
+        <p>
+          Ubicacion: {{trabajador_actual.zona}}
+        </p>
+        <p>
+          Contacto: {{trabajador_actual.contacto}}
+        </p>
+        <p>
+          Descripcion: {{trabajador_actual.descripcion}}
+        </p>
+
+        <p>
+          TARIFAS
+        </p>
+        <p ng-repeat="tarifa in trabajador_actual.tarifas">
+          {{tarifa.nombre}}: {{tarifa.tarifa}} Gs.
+        </p>
+      </div>
+      <a class="item item-avatar" ng-repeat="comentario in trabajador_actual.comentarios">
+        <img src="venkman.jpg">
+        <h2>{{comentario.nombre}}</h2>
+        <p>{{comentario.contenido}}</p>
+      </a>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

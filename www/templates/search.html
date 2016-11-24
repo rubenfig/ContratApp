@@ -1,5 +1,30 @@
-<ion-view view-title="Search">
+<ion-view view-title="ContratApp">
   <ion-content>
-    <h1>Search</h1>
+    <ion-list>
+      <label class="item item-input item-select">
+        <div class="input-label positive">
+          CATEGORIA
+        </div>
+        <select>
+          <option ng-repeat="categoria in categorias">{{categoria.title}}</option>
+        </select>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label positive">ZONA/CIUDAD</span>
+        <input type="text" placeholder="Escriba la zona">
+      </label>
+      <label class="item item-input range">
+        <span class="input-label positive">TARIFA MINIMA</span>
+        <input type="range" ng-model="tarifa_min" name="tarifa_min">
+      </label>
+      <label class="item item-input range">
+        <span class="input-label positive">TARIFA MAXIMA</span>
+        <input type="range" ng-model="tarifa_max" name="tarifa_max">
+      </label>
+      <label class="item">
+      <button class="button button-positive boton-centro">BUSCAR</button>
+      </label>
+    </ion-list>
+
   </ion-content>
 </ion-view>

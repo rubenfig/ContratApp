@@ -1,1 +1,22 @@
 /* Empty. Add your own CSS if you like */
+.centro{
+  text-align:center;
+
+}
+.estrella{
+  font-size: 50px;
+}
+.boton-centro{
+  margin:auto;
+  display: block;
+
+}
+.titulo_inicio{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+  margin-top: 50px !important;
+}
+.login{
+  margin-top: 75px !important;
+}

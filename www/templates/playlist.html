@@ -1,5 +1,13 @@
-<ion-view view-title="Playlist">
+<ion-view view-title="ContratApp">
   <ion-content>
-    <h1>Playlist</h1>
+    <ion-list>
+        <a ng-repeat="trabajador in trabajadores" class="item item-thumbnail-left item-icon-right" href="#/app/perfil/{{trabajador.id}}">
+          <img src="cover.jpg">
+          <h2>{{trabajador.nombre}}</h2>
+          <p>{{trabajador.zona}}</p>
+          <p>{{trabajador.contacto}}</p>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+    </ion-list>
   </ion-content>
 </ion-view>
