@@ -1,15 +1,20 @@
 /* Empty. Add your own CSS if you like */
 .centro{
   text-align:center;
+  padding-bottom: 10px;
 
 }
 .estrella{
   font-size: 50px;
+  color: gold;
 }
 .boton-centro{
   margin:auto;
   display: block;
 
+}
+.popup-buttons .button{
+  font-size: smaller;
 }
 .titulo_inicio{
   text-align: center;

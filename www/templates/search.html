@@ -5,25 +5,45 @@
         <div class="input-label positive">
           CATEGORIA
         </div>
-        <select>
-          <option ng-repeat="categoria in categorias">{{categoria.title}}</option>
+        <select >
+          <option ng-repeat="categoria in categorias" value="{{categoria}}">{{categoria.title}}</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label positive">
+          SUB-CATEGORIA
+        </div>
+        <select >
+          <option ng-repeat="sub_categoria in sub_categorias">{{sub_categoria}}</option>
         </select>
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label positive">ZONA/CIUDAD</span>
         <input type="text" placeholder="Escriba la zona">
       </label>
-      <label class="item item-input range">
+      <label class="item item-input item-stacked-label">
         <span class="input-label positive">TARIFA MINIMA</span>
-        <input type="range" ng-model="tarifa_min" name="tarifa_min">
+        <input type="number" placeholder="Escriba la tarifa mínima en Gs." ng-model="tarifa_min">
       </label>
-      <label class="item item-input range">
+      <label class="item item-input item-stacked-label">
         <span class="input-label positive">TARIFA MAXIMA</span>
-        <input type="range" ng-model="tarifa_max" name="tarifa_max">
+        <input type="number" placeholder="Escriba la tarifa máxima en Gs." ng-model="tarifa_max">
       </label>
+
+      <label class="item item-input ">
+        <span class="input-label positive">Incluir perfiles sin tarifas definidas</span>
+        <label class="toggle toggle-positive">
+          <input type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </label>
+
       <label class="item">
-      <button class="button button-positive boton-centro">BUSCAR</button>
+      <button class="button button-positive boton-centro" ng-click="filtrar()">BUSCAR</button>
       </label>
+
     </ion-list>
 
   </ion-content>

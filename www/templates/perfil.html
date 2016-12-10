@@ -1,11 +1,12 @@
-<ion-view view-title="ContratApp">
+<ion-view view-title="Perfil">
   <ion-content>
     <ion-list>
 
       <div class="item item-body">
-        <img class="full-image" src="delorean.jpg">
+        <img class="full-image boton-centro" style="height:150px; width: auto;" src="../img/foto.jpg">
+        <i class="icon icon-right" ng-class="favorito" ng-click="fav()"></i>
       </div>
-      <div class="item item-body " >
+      <div class="item item-body" >
         <div class="centro">
         <i class="icon estrella" ng-class="estrellas[0]" ng-click="calificar(0)"></i>
         <i class="icon estrella" ng-class="estrellas[1]" ng-click="calificar(1)"></i>
@@ -13,7 +14,8 @@
         <i class="icon estrella" ng-class="estrellas[3]" ng-click="calificar(3)"></i>
         <i class="icon estrella" ng-class="estrellas[4]" ng-click="calificar(4)"></i>
         </div>
-        <button class="button button-positive boton-centro">CALIFICAR</button>
+        <p></p>
+        <button class="button button-positive boton-centro" ng-click="abrirModal()">CALIFICAR</button>
       </div>
 
       <div class="item item-body">
@@ -38,7 +40,7 @@
         </p>
       </div>
       <a class="item item-avatar" ng-repeat="comentario in trabajador_actual.comentarios">
-        <img src="venkman.jpg">
+        <img src="../img/foto2.jpg">
         <h2>{{comentario.nombre}}</h2>
         <p>{{comentario.contenido}}</p>
       </a>
