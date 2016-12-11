@@ -69,7 +69,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
     .state('app.perfil', {
-      url: '/perfil/:trabajadorId',
+      url: '/perfil/:trabajadorId/:rubro',
       views: {
         'menuContent': {
           templateUrl: 'templates/perfil.html',
